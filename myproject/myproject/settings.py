@@ -74,20 +74,17 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 # settings.py (snippet)
-import os
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get("MYSQLDATABASE"),
-        'USER': os.environ.get("MYSQLUSER"),
-        'PASSWORD': os.environ.get("MYSQLPASSWORD"),
-        'HOST': os.environ.get("MYSQLHOST"),
-        'PORT': os.environ.get("MYSQLPORT"),
+        'NAME': 'web_project',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
+        'PORT': '3306',
         'OPTIONS': {
-            'charset': 'utf8mb4',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
+        }
     }
 }
 
